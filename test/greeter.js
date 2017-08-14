@@ -1,9 +1,9 @@
-const greeter = require('../src/greeter');
+const Greeter = require('../src/greeter');
 
 describe('greeter', () => {
   it('prints a welcome message', () => {
-    const msg = greeter('Lewis');
+    const greeter = new Greeter('Lewis');
 
-    expect(msg).toEqual('Hello, Lewis!');
+    expect(greeter.getMessage()).toEqual('Hello, Lewis!');
   });
 });
