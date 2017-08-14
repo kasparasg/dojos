@@ -1,0 +1,21 @@
+{
+  "name": "dojos",
+  "version": "0.1.0",
+  "description": "Dojos",
+  "private": true,
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine-node test --matchall",
+    "test-watch": "npm run test -- --color --autotest --watch src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.private.linksynergy.com/kasparasg/dojos.git"
+  },
+  "author": "Squad 7",
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  }
+}
