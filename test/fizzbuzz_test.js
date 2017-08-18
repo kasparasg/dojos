@@ -27,7 +27,7 @@ describe('fizzbuz', () => {
     const fizzbuzzer = new FizzBuzz(0, 15);
 
     const output = fizzbuzzer.run();
-    const expected = '';
+    const expected = [0, 1, 2, "fizz", 4, "buzz", "fizz", 7, 8, "fizz", "buzz", 11, "fizz", 13, 14, "fizzbuzz"];
 
     expect(output).toEqual(expected);
 

@@ -6,16 +6,32 @@ module.exports = class FizzBuzz {
 
   run() {
 
-  	for(let i = this.min; i <= this.max; i++) {
-  		const message = 
-  	}
+    let output = [];
+
+    for (let i = this.min, msg = ""; i <= this.max; i++) {
+
+      if (this.isFizz(i)) {
+        msg += "fizz";
+      }
+      if (this.isBuzz(i)) {
+        msg += "buzz";
+      }
+
+      if (!msg) {
+        msg = i;
+      }
+
+      output.push(msg);
+    }
+
+    return output;
   }
 
   isFizz(number) {
-  	return !(number % 3);
+    return !(number % 3);
   }
 
   isBuzz(number) {
-  	return !(number % 5);
+    return !(number % 5);
   }
 };
