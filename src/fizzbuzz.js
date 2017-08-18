@@ -5,11 +5,10 @@ module.exports = class FizzBuzz {
   }
 
   run() {
-
     let output = [];
 
-    for (let i = this.min, msg = ""; i <= this.max; i++) {
-
+    for (let i = this.min; i <= this.max; i++) {
+      let msg = "";
       if (this.isFizz(i)) {
         msg += "fizz";
       }
