@@ -11,12 +11,17 @@ module.exports = class CodeCracker {
 
   decrypt(msg) {
     let chars = msg.split('');
-    const alpha = this.map.keys();
-    const tokens = this.map.values();
+    const alpha = Object.keys(this.map);
+    const tokens = this.values(this.map);
 
-    return chars.map({
-      
-
+    return chars.map((c) => {
+      return alpha[tokens.indexOf(c)];
     }).join('');
+  }
+
+  values(map) {
+    return Object.keys(map).map((key) => {
+      return map[key];
+    });
   }
 };

@@ -24,8 +24,33 @@ describe('CodeCracker', () => {
 
     expect(cracker.decrypt(msg)).toBe('cab');
   });
-
+ 
   it('encrypts hello message correctly', () => {
+    const msg = 'hello';
+    const cracker = new CodeCracker({
+      a: '!',
+      b: ')',
+      c: '"',
+      d: '(',
+      e: '£',
+      f: '*',
+      g: '%',
+      h: '&',
+      i: '>',
+      j: '<',
+      k: '@',
+      l: 'a',
+      m: 'b',
+      n: 'c',
+      o: 'd',
+      p: 'e',
+      q: 'f',
+      r: 'g',
+      s: 'h',
+      t: 'i',
+      u: 'j'
+    });
 
+    expect(cracker.encrypt(msg)).toBe('&£aad');
   });
 });
