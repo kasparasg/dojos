@@ -4,6 +4,11 @@ module.exports = class CodeCracker {
   }
 
   encrypt(msg) {
+    let chars =  msg.split('');
+
+  return chars.map(c => {
+    return this.map[c];
+  }).join('');
 
   }
 

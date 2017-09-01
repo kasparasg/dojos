@@ -13,7 +13,7 @@ describe('CodeCracker', () => {
     expect(cracker.encrypt(msg)).toBe('"!)');
   });
 
-  it('descrypts correctly', () => {
+  it('decrypts correctly', () => {
     const msg = '"!)';
     const cracker = new CodeCracker({
       a: '!',
