@@ -1,5 +1,5 @@
 describe('diamond', () => {
   it('', () => {
-    
+
   });
 });
